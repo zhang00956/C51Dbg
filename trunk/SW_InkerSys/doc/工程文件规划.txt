@@ -1,0 +1,83 @@
+->工程文件名
+|11>branches  -工程分支
+|12>tage         -工程标签
+|13>trunk       -工程主干
+      l21>DOC         -资料文件
+      |22>HW_XXX   -原理图，电路板
+      |23>SW_XXX    -软件程序
+            |31>code   -程序源代码
+            |     |41>DevDriver   -各驱动代码
+            |     |     |51>Beep    -蜂鸣器模块
+            |     |     |     |61>Beep.c    -蜂鸣器源代码
+            |     |     |     |     |71>void ProF_10mS_Beeper(void){}
+            |     |     |     |     |72>void SetBeep(u8 num,u8 time_on,u8 time_off){}
+            |     |     |     |62>Beep.h    -蜂鸣器头文件
+            |     |     |           |71>void ProF_10mS_Beeper(void);                           -定时器每10mS执行一次
+            |     |     |           |72>void SetBeep(u8 num,u8 time_on,u8 time_off);  -用户操作蜂鸣器参数为(次数、开时间、关时间)
+            |     |     |52>Input   -输入IO模块
+            |     |     |     |61>Input.c    -输入IO源代码
+            |     |     |     |62>Input.h    -输入IO头文件
+            |     |     |53>key       -按键输入模块
+            |     |     |     |61>Key.c    -按键输入源代码
+            |     |     |     |62>Key.h    -按键输入头文件
+            |     |     |54>Lamp    -指示灯模块
+            |     |     |     |61>Lamp.c    -指示灯源代码
+            |     |     |     |62>Lamp.h    -指示灯头文件
+            |     |     |55>mbs      -Modbus从设备模块
+            |     |     |     |61>Crc.c           -CRC校验源代码
+            |     |     |     |62>Crc.h           -CRC校验头文件
+            |     |     |     |63>MbsReg.c    -寄存器定义源代码
+            |     |     |     |64>MbsReg.h    -寄存器定义头文件
+            |     |     |     |65>MbsWp.c     -寄存器写保护源代码
+            |     |     |     |66>MbsWp.h     -寄存器写保护头文件
+            |     |     |56>project  -项目执行模块
+            |     |     |     |61>Project.c    -项目执行源代码
+            |     |     |     |62>Project.h    -项目执行头文件
+            |     |42>SysApp     -系统代码
+            |     |     |51>Inc     -系统代码H头文件
+            |     |     |     |61>Bsp.h          -板级函数接口头文件
+            |     |     |     |62>Format.h    -格式转换头文件
+            |     |     |     |63>HearBeat.h -系统节拍定时中断头文件
+            |     |     |     |64>inkerSys.h   -系统包含头文件
+            |     |     |     |65>License.h    -产品认证头文件
+            |     |     |     |66>Macro.h     -类型宏定义头文件
+            |     |     |     |67>McuDef.h   -单片机配置头文件
+            |     |     |     |68>RunTime.h  -产品运行时间累计头文件
+            |     |     |     |69>Store.h       -产品掉电数据存储头文件
+            |     |     |     |6A>System.h    -系统参数头文件
+            |     |     |     |6B>Version.h    -产品版本版权信息头文件
+            |     |     |52>Src     -系统代码C头文件
+            |     |     |     |61>Bsp.c          -板级函数接口源代码
+            |     |     |     |62>Format.c    -格式转换源代码
+            |     |     |     |63>HearBeat.c -系统节拍定时中断源代码
+            |     |     |     |64>inkerSys.c   -系统包含源代码
+            |     |     |     |65>License.c    -产品认证源代码
+            |     |     |     |66>Macro.c     -类型宏定义源代码
+            |     |     |     |67>McuDef.c   -单片机配置源代码
+            |     |     |     |68>RunTime.c  -产品运行时间累计源代码
+            |     |     |     |69>Store.c       -产品掉电数据存储源代码
+            |     |     |     |6A>System.c    -系统参数源代码
+            |     |     |     |6B>Version.c    -产品版本版权信息源代码
+            |     |43>SysBsp      -板级代码
+            |     |     |51>STC60S2   -60S2单片机板级文件
+            |     |     |     |61>STARTUP.A51   -60S2单片机启动文件
+            |     |     |     |62>Inc      -板级头文件
+            |     |     |     |     |71>Eeprom_Soc.h      -内部Flash头文件
+            |     |     |     |     |72>Watchdog_Soc.h  -内部看门狗头文件
+            |     |     |     |     |73>Stc12c5a60s2.h    -60S2头文件
+            |     |     |     |63>Src      -板级源代码
+            |     |     |           |71>Eeprom_Soc.c      -内部Flash源代码
+            |     |     |           |72>Watchdog_Soc.c  -内部看门狗源代码
+            |     |     |           |73>Stc12c5a60s2.c    -60S2配置、IO操作源代码
+            |     |44>SysDebug -系统调试代码
+            |     |     |51>ComDbg  -串口命令行模块
+            |     |     |52>Debug     -格式化打印模块
+            |     |44>SysUI        -系统人机界面代码
+            |32>doc       -软件资料
+            |33>HexBin  -版本升级文件
+            |     |41>MoveHexFile  -移动编译生成Hex文件
+            |     |42>版本日记.txt    -记录版本生成时间及修改相关日记
+            |     |43>xxx_V.hex       -编译生成文件
+            |     |44>xxx_Vx.xx.hex  -已发布历史编译文件
+            |34>keil        -keil编译工程
+            |35>SI          -Source Insight编写工程

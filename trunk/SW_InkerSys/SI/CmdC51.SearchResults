@@ -1,0 +1,3 @@
+---- ProB_100mS_LedSeg Matches (2 in 2 files) ----
+LedSeg.c (e:\inkersys\comdbg_c51\trunk\sw_inkersys\code\devdriver\ledseg):GLOBAL void ProB_100mS_LedSeg(void)
+LedSeg.h (e:\inkersys\comdbg_c51\trunk\sw_inkersys\code\devdriver\ledseg):GLOBAL void ProB_100mS_LedSeg(void);

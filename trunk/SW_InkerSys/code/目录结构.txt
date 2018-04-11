@@ -1,0 +1,6 @@
+﻿SysApp： 	放置产品主要实现函数，比如main，sys_proc，version等。
+SysUI：		放置GUI，menu等处理函数。
+SysBsp： 	放置CPU，device driver等相关函数。
+SysDebug：	放置debug相关文件，比如assert，debug，ufd等。
+DevDriver：	放置相关外设的驱动程序。
+
